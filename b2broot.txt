@@ -1,0 +1,65 @@
+ufw
+	sudo ufw status numbered
+		- vypis rules s cislami
+	sudo ufw --help
+	sudo allow ARGS
+	sudo delete ARGS
+
+sudo su -
+	- prepnut sa na root usera (admina)
+	- switch user
+
+chage -l root $user
+	- vypise password aging policy pre $usera
+	- pre roota, pouzit sudo
+
+chage -M 30 -m 2 -W 7 $user
+	-  nastavuje password aging policy
+
+cat /var/log/sudo
+	- prestavili sme /var/log/sudo-io na /var/log/sudo aby sa tam ukladali logy
+
+visudo
+/etc/sudoers
+	- subor na nastavovanie suda
+
+EDITOR="vim" visudo
+	- otvori visudo vo vime
+
+getend group $group
+	- vypise userov, ktory su v grupe
+
+groups $user
+	- v akych groupach je user
+
+systemctl stop/start/disable cron
+	- vypnut cron
+	- zapnut krok
+	- disable v aktualnom boote nechat, ale v dalsiom vypnut
+
+CTRL R
+	- prehladavat historiu komandov, nieco ako CTRL F
+
+systemctl status cron
+	- vypise cron
+
+top/htop
+	- task manager pre linux
+
+vim /etc/hostname
+vim /etc/hosts
+	- zmenit dns a meno PC
+
+sudo nano /etc/hostname
+	- change hostname
+
+sudo require tty
+	- sudo moze pouzivat iba loggedin session
+
+"sudo vim /etc/pam.d/common-password
+	- nastavenie pravidiel pre password
+
+heslo pri vytvarani neveho usera
+
+cut -d: -f1 /etc/passwd
+
